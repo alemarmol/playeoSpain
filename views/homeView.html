@@ -1,0 +1,359 @@
+<section class="slider">
+  <ul class="slides">
+    <li>
+      <a href="img/slider/bolonia.jpg" data-lightbox="playas-slider" data-title="Playa de Bolonia">
+        <img src="img/slider/bolonia.jpg" title="Playa de Bolonia" alt="Playa de Bolonia" />
+      </a>
+    	<div class="caption center-align">
+        <h3 class="text-slider">PlayeoSpain, web referencia para buscar tu playa soñada</h3>
+        <h5 class="text-slider2">Encuentra tu playa perfecta</h5>
+      </div>
+    </li>
+    <li>
+      <a href="img/slider/murcia.jpg" data-lightbox="playas-slider" data-title="Playas de Murcia">
+        <img src="img/slider/murcia.jpg" title="Playas de Murcia" alt="Playas de Murcia" />
+      </a>
+    </li>
+    <li>
+      <a href="img/slider/cofete.jpg" data-lightbox="playas-slider" data-title="Playa de Cofete">
+        <img src="img/slider/cofete.jpg" title="Playa de Cofete" alt="Playa de Cofete" />
+      </a>
+    </li>
+    <li>
+      <a href="img/slider/peniscola.jpg" data-lightbox="playas-slider" data-title="Playa de Peñíscola">
+        <img src="img/slider/peniscola.jpg" title="Playa de Peñíscola" alt="Playa de Peñíscola" />
+      </a>
+    </li>
+    <li>
+      <a href="img/slider/muro.jpg" data-lightbox="playas-slider" data-title="Playa de Muro">
+        <img src="img/slider/muro.jpg" title="Playa de Muro" alt="Playa de Muro" />
+      </a>
+    </li>
+    <li>
+      <a href="img/slider/catedrales.jpg" data-lightbox="playas-slider" data-title="Playa de Las Catedrales">
+        <img src="img/slider/catedrales.jpg" title="Playa de Las Catedrales" alt="Playa de Las Catedrales" />
+      </a>
+    </li>
+    <li>
+      <a href="img/slider/concha.jpg" data-lightbox="playas-slider" data-title="Playa de La Concha">
+        <img src="img/slider/concha.jpg" title="Playa de La Concha" alt="Playa de La Concha" />
+      </a>
+    </li>
+    <li>
+      <a href="img/slider/buelna.jpg" data-lightbox="playas-slider" data-title="Playa de Buelna">
+        <img src="img/slider/buelna.jpg" title="Playa de Buelna" alt="Playa de Buelna" />
+      </a>
+    </li>
+    <li>
+      <a href="img/slider/sanvicente.jpg" data-lightbox="playas-slider" data-title="Playa de San Vicente">
+        <img src="img/slider/sanvicente.jpg" title="Playa de San Vicente" alt="Playa de San Vicente" />
+      </a>
+    </li>
+    <li>
+      <a href="img/slider/nitdelfoc.jpg" data-lightbox="playas-slider" data-title="Playa La Nit del Foc">
+        <img src="img/slider/nitdelfoc.jpg" title="Playa La Nit del Foc" alt="Playa La Nit del Foc" />
+      </a>
+    </li>
+    <li>
+      <a href="img/slider/riberaceuta.jpg" data-lightbox="playas-slider" data-title="Playa de la Ribera de Ceuta">
+        <img src="img/slider/riberaceuta.jpg" title="Playa de la Ribera de Ceuta" alt="Playa de la Ribera de Ceuta" />
+      </a>
+    </li>
+    <li>
+      <a href="img/slider/horcas-coloradas.jpg" data-lightbox="playas-slider" data-title="Horcas Coloradas">
+        <img src="img/slider/horcas-coloradas.jpg" title="Playa de Horcas Coloradas" alt="Horcas Coloradas" />
+      </a>
+    </li>
+    <li>
+      <a href="img/slider/nerja.jpg" data-lightbox="playas-slider" data-title="Playa de Nerja">
+        <img src="img/slider/nerja.jpg" title="Playa de Nerja" alt="Playa de Nerja" />
+      </a>
+    </li>
+  </ul>
+</section>
+
+<section class="container">
+  <div class="sec-app-info row">
+    <section class="cols 12">
+      <h3 class="info-app1 center">La playa que quieres...</h3>
+      <h1 class="info-app2 center">y que esperas encontrar</h1>
+      <article class="info-app3">
+        <p>Cierra los ojos. Sí, sí; es a tí. Recarga las pilas viviendo una experiencia completamente única.</p>
+        <p>Imagínate tumbado en una playa española. Hace sol y la arena fina es agradable al tacto. Te apetece un baño. Puede que estés en el mar Mediterráneo, en el mar Cantábrico o en el océano Atlántico, en una playa municipal, escondida, salvaje, intacta,...</p>
+        <p>En cualquier caso, la playa es el paraíso, y con casi 8.000 kilómetros de costa en España ¡seguramente encontrarás la playa de tus sueños!</p>
+        <p>PlayeoSpain te ofrece la posibilidad de encontrar tu playa perfecta en función de tus prioridades/gustos/necesidades. ¡Disfruta de la experiencia!</p>
+      </article> 
+    </section>
+  </div>
+</section>
+
+<section class="sec-map">
+  <h1 class="center info-map">¿Dónde te gustaría relajarte?</h1>
+  <div id="map"></div>
+</section>
+
+<section id="sec-beach-city" class="container">
+  <h1 class="center info-map">¿Qué tipo de playa buscas?</h1>
+  <div class="row">
+    <form class="container input-beach">
+      <input class="col s4" type="text" name="provincia" id="provinciaInput" disabled />
+    </form>
+    <a ng-click="loadNames(); newPage();" class="button-beach2 waves-effect waves-light btn">Busca tu playa</a>
+  </div>
+</section>
+
+<script type="text/javascript">
+
+  $(document).ready(function(){
+    //Función para el Slider
+    $('.slider').slider({full_width: true});
+
+    //Función para el map
+    var map = AmCharts.makeChart("map",{
+      "type": "map",
+      "addClassNames": true,
+      "fontSize": 15,
+      "color": "#FFFFFF",
+      "projection": "mercator",
+      "backgroundColor": "rgba(62, 214, 208,0.4)",
+      "dataProvider": {
+        "map": "spainProvincesLow",
+        "getAreasFromMap": true,
+        "areas": [
+          {
+            "id": "ES-A",
+            "title": "Alicante",
+            "color": "rgb(12, 183, 242)",
+            "rollOverColor": "#F2DC85",
+            "selectable": true
+          },
+          {
+            "id": "ES-AL",
+            "title": "Almeria",
+            "color": "rgb(12, 183, 242)",
+            "rollOverColor": "#F2DC85",
+            "selectable": true
+          },
+          {
+            "id": "ES-B",
+            "title": "Barcelona",
+            "color": "rgb(12, 183, 242)",
+            "rollOverColor": "#F2DC85",
+            "selectable": true
+          },
+          {
+            "id": "ES-BI",
+            "title": "Bizkaia",
+            "color": "rgb(12, 183, 242)",
+            "rollOverColor": "#F2DC85",
+            "selectable": true
+          },
+          {
+            "id": "ES-C",
+            "title": "A Coruna",
+            "color": "rgb(12, 183, 242)",
+            "rollOverColor": "#F2DC85",
+            "selectable": true
+          },
+          {
+            "id": "ES-CA",
+            "title": "Cadiz",
+            "color": "rgb(12, 183, 242)",
+            "rollOverColor": "#F2DC85",
+            "selectable": true
+          },
+          {
+            "id": "ES-CE",
+            "title": "Ceuta",
+            "color": "rgb(12, 183, 242)",
+            "rollOverColor": "#F2DC85",
+            "selectable": true
+          },
+          {
+            "id": "ES-CS",
+            "title": "Castellon",
+            "color": "rgb(12, 183, 242)",
+            "rollOverColor": "#F2DC85",
+            "selectable": true
+          },
+          {
+            "id": "ES-GC",
+            "title": "Las Palmas",
+            "color": "rgb(12, 183, 242)",
+            "rollOverColor": "#F2DC85",
+            "selectable": true
+          },
+          {
+            "id": "ES-GI",
+            "title": "Girona",
+            "color": "rgb(12, 183, 242)",
+            "rollOverColor": "#F2DC85",
+            "selectable": true
+          },
+          {
+            "id": "ES-GR",
+            "title": "Granada",
+            "color": "rgb(12, 183, 242)",
+            "rollOverColor": "#F2DC85",
+            "selectable": true
+          },
+          {
+            "id": "ES-H",
+            "title": "Huelva",
+            "color": "rgb(12, 183, 242)",
+            "rollOverColor": "#F2DC85",
+            "selectable": true
+          },
+          {
+            "id": "ES-LU",
+            "title": "Lugo",
+            "color": "rgb(12, 183, 242)",
+            "rollOverColor": "#F2DC85",
+            "selectable": true
+          },
+          {
+            "id": "ES-MA",
+            "title": "Malaga",
+            "color": "rgb(12, 183, 242)",
+            "rollOverColor": "#F2DC85",
+            "selectable": true
+          },
+          {
+            "id": "ES-ML",
+            "title": "Melilla",
+            "color": "rgb(12, 183, 242)",
+            "rollOverColor": "#F2DC85",
+            "selectable": true
+          },
+          {
+            "id": "ES-MU",
+            "title": "Murcia",
+            "color": "rgb(12, 183, 242)",
+            "rollOverColor": "#F2DC85",
+            "selectable": true
+          },
+          {
+            "id": "ES-O",
+            "title": "Asturias",
+            "color": "rgb(12, 183, 242)",
+            "rollOverColor": "#F2DC85",
+            "selectable": true
+          },
+          {
+            "id": "ES-PM",
+            "title": "Illes Balears",
+            "color": "rgb(12, 183, 242)",
+            "rollOverColor": "#F2DC85",
+            "selectable": true
+          },
+          {
+            "id": "ES-PO",
+            "title": "Pontevedra",
+            "color": "rgb(12, 183, 242)",
+            "rollOverColor": "#F2DC85",
+            "selectable": true
+          },
+          {
+            "id": "ES-S",
+            "title": "Cantabria",
+            "color": "rgb(12, 183, 242)",
+            "rollOverColor": "#F2DC85",
+            "selectable": true
+          },
+          {
+            "id": "ES-SS",
+            "title": "Gipuzkoa",
+            "color": "rgb(12, 183, 242)",
+            "rollOverColor": "#F2DC85",
+            "selectable": true
+          },
+          {
+            "id": "ES-TF",
+            "title": "Santa Cruz de Tenerife",
+            "color": "rgb(12, 183, 242)",
+            "rollOverColor": "#F2DC85",
+            "selectable": true
+          },
+          {
+            "id": "ES-T",
+            "title": "Tarragona",
+            "color": "rgb(12, 183, 242)",
+            "rollOverColor": "#F2DC85",
+            "selectable": true
+          },
+          {
+            "id": "ES-V",
+            "title": "Valencia",
+            "color": "rgb(12, 183, 242)",
+            "rollOverColor": "#F2DC85",
+            "selectable": true
+          }
+        ]
+      },
+      "balloon": {
+        "horizontalPadding": 15,
+        "borderAlpha": 0,
+        "borderThickness": 1,
+        "verticalPadding": 15
+      },
+      "areasSettings": {
+        "color": "rgba(129,129,129,1)",
+        "rollOverColor": "rgba(129,129,129,1)",
+        "outlineColor": "rgba(80,80,80,1)",
+        "rollOverOutlineColor": "rgba(80,80,80,1)",
+        "rollOverBrightness": 0,
+        "legend": {
+          "enabled": false
+        },
+        "showEntries": false,
+        "selectedBrightness": 0,
+        "selectable": false,
+        "unlistedAreasAlpha": 0,
+        "unlistedAreasOutlineAlpha": 0
+      },
+      
+      "linesSettings": {
+        "color": "rgba(129,129,129,1)",
+        "selectable": true,
+        "rollOverBrightness": 20,
+        "selectedBrightness": 20
+      },
+      "zoomControl": {
+        "zoomControlEnabled": true,
+        "homeButtonEnabled": false,
+        "panControlEnabled": false,
+        "right": 38,
+        "bottom": 30,
+        "minZoomLevel": 0.25,
+        "gridHeight": 100,
+        "gridAlpha": 0.1,
+        "gridBackgroundAlpha": 0,
+        "gridColor": "#FFFFFF",
+        "draggerAlpha": 1,
+        "buttonCornerRadius": 2
+      },
+    });
+
+    map.addListener("clickMapObject", function (event) {
+      if(event.mapObject.title === "Alicante" || event.mapObject.title === "Almeria" || event.mapObject.title === "Barcelona" || event.mapObject.title === "Bizkaia" || event.mapObject.title === "A Coruna" || event.mapObject.title === "Cadiz" || event.mapObject.title === "Ceuta" || event.mapObject.title === "Castellon" || event.mapObject.title === "Las Palmas" || event.mapObject.title === "Girona" || event.mapObject.title === "Granada" || event.mapObject.title === "Huelva" || event.mapObject.title === "Lugo" || event.mapObject.title === "Malaga" || event.mapObject.title === "Melilla" || event.mapObject.title === "Murcia" || event.mapObject.title === "Asturias" || event.mapObject.title === "Illes Balears" || event.mapObject.title === "Pontevedra" || event.mapObject.title === "Cantabria" || event.mapObject.title === "Gipuzkoa" || event.mapObject.title === "Santa Cruz de Tenerife" || event.mapObject.title === "Tarragona" || event.mapObject.title === "Valencia") {
+        
+        $('#provincia option:selected').text(event.mapObject.title);
+        $('#provincia').val(event.mapObject.title);
+        $('#provinciaInput').val(event.mapObject.title);
+        var myFilter = event.mapObject.title;
+        var loadName3;
+        loadName3 =  $('#provinciaInput').val();
+        location.href = '#provincia/'+loadName3;
+        /*$('#sec-beach-city').show(); 
+        $("html, body").animate({scrollTop: $(".destiny").offset().top - 60}, 2000);*/
+
+      } else {
+        event.preventDefault();
+      }
+    });
+
+    //Sección Formulario oculta por defecto
+    $('#sec-beach-city').hide();
+  });
+
+</script>

@@ -1,0 +1,78 @@
+<div class="container row">
+  <h4 class="title-sec left">Buzón de sugerencias</h4>
+</div>
+
+<div class="container row">
+  <p class="infor">Si te gusta nuestra aplicación y quieres ayudarnos a conseguir más información de nuestras playas, no lo dudes, póngase en contacto con nosotros</p>
+</div>
+
+<div class="container row">
+  <form class="col s12" name="myForm">
+    <div class="row">
+      <div class="input-field col s4">
+        <i class="material-icons prefix">account_circle</i>
+        <input id="icon_prefix" type="text" name="myName" ng-model="myName" class="validate" length="15" required>
+        <label for="icon_prefix" data-error="wrong" data-success="right">Nombre</label>
+        <span class="error" ng-show="myForm.myName.$touched && myForm.myName.$invalid">El Nombre es obligatorio</span>
+      </div>
+      <div class="input-field col s4">
+        <i class="material-icons prefix">account_circle</i>
+        <input id="icon_prefix" type="text" class="validate" length="30">
+        <label for="icon_prefix" data-error="wrong" data-success="right">Apellidos</label>
+      </div>
+      <div class="input-field col s4">
+        <i class="material-icons prefix">perm_contact_calendar</i>
+        <input type="date" class="datepicker" placeholder="Fecha de nacimiento" required>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s4">
+        <i class="material-icons prefix">account_circle</i>
+        <input id="email" name="email" ng-model="email" type="email" class="validate" required>
+        <label for="email" data-error="wrong" data-success="right">example@example.com</label>
+        <span class="error" ng-show="myForm.email.$touched && myForm.email.$invalid">El Email es obligatorio y debe ser válido</span>
+      </div>
+      <div class="input-field col s4">
+        <i class="material-icons prefix">phone</i>
+        <input id="icon_telephone" name="sizeTel" ng-model="sizeTel" type="number" min="100000000" max="999999999" class="validate" required>
+        <label for="icon_telephone" data-error="wrong" data-success="right">Teléfono</label>
+        <span class="error" ng-show="myForm.sizeTel.$error.min || myForm.sizeTel.$error.max">El número de Teléfono no es correcto</span>
+      </div>
+      <div class="input-field col s4">
+        <i class="material-icons prefix">mode_edit</i>
+        <textarea id="icon_prefix2" class="materialize-textarea" length="120"></textarea>
+        <label for="icon_prefix2">Descripción</label>
+      </div>
+      <div class="file-field input-field col s4">
+        <div class="btn">
+          <span>Archivo</span>
+          <input type="file" multiple>
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text" placeholder="Puede subir uno o más archivos">
+        </div>
+      </div>
+    </div>
+    <button class="btn tooltipped right" data-position="right" data-delay="50" data-tooltip="Pulsar para Enviar" type="submit" name="action">Enviar
+      <i class="material-icons right">send</i>
+    </button>
+  </form>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('input#icon_prefix, textarea#icon_prefix2').characterCounter();
+  });
+
+  $(document).ready(function() {
+    $('.datepicker').pickadate({
+      selectMonths: true, // Creates a dropdown to control month
+      selectYears: 15 // Creates a dropdown of 15 years to control year
+    });
+  });
+
+  $(document).ready(function(){
+     $('.tooltipped').tooltip({delay: 50});
+  });
+</script>

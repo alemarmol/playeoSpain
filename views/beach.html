@@ -1,0 +1,271 @@
+<section class="container" ng-controller="provinciaController">
+	<div class="row">
+	  <h4 class="title-sec title-gallery center">Guía detallada de la playa</h4>
+	</div>
+  <div class="row">
+    <a href="#comunidadAutonoma/{{comunidadAutonoma.comunidadAutonoma}}" class="button-beach4 waves-effect waves-light btn col s4 left">Volver a la Comunidad Autónoma</a>
+    <a href="#/" class="button-beach5 waves-effect waves-light btn col s4 right">Volver al inicio</a>
+  </div>
+</section>
+
+<div class="container row">
+  <article ng-repeat="loadBeach in loadBeaches  | filter: {Nombre:namebeachFilter}" class="card-edit-single">
+    <div class="card">
+      <div class="card-image">
+        <a href="{{loadBeach.Imagen}}" data-lightbox="name" data-title="{{loadBeach.Nombre}}">
+          <img ng-src="{{loadBeach.Imagen}}" alt="{{loadBeach.Imagen}}" class="img-edit" />
+        </a>
+        <span class="card-title">{{loadBeach.Nombre}}</span>
+      </div>
+      <div class="desc card-content">
+        <p>{{loadBeach.Descripcion}}</p>
+      </div>
+      <div class="card-action">
+        <table class="table-1 centered responsive-table highlight">
+          <thead>
+            <tr>
+              <th colspan="2" class="item-title">1. Características generales</th>
+              <th colspan="2" class="item-title">2. Tipo de playa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Provincia: </strong></td>
+              <td><span class="info-item">{{loadBeach.Provincia}}</span></td>
+              <td><strong>Composición: </strong></td>
+              <td><span class="info-item">{{loadBeach.Composicion}}</span></td>
+            </tr>
+            <tr>
+              <td><strong>Término municipal: </strong></td>
+              <td><span class="info-item">{{loadBeach.Termino_Municipal}}</span></td>
+              <td><strong>Tipo de arena: </strong></td>
+              <td><span class="info-item">{{loadBeach.Tipo_de_arena}}</span></td>
+            </tr>
+            <tr>
+              <td><strong>Comunidad Autónoma: </strong></td>
+              <td><span class="info-item">{{loadBeach.comunidadAutonoma}}</span></td>
+              <td><strong>Condiciones de baño: </strong></td>
+              <td><span class="info-item">{{loadBeach.Condiciones_bano}}</span></td>
+            </tr>
+            <tr>
+              <td><strong>Longitud: </strong></td>
+              <td><span class="info-item">{{loadBeach.Longitud}}</span></td>
+              <td><strong>Zona de fondeo balizada: </strong></td>
+              <td><span class="info-item">{{loadBeach.Zona_fondeo_balizada}}</span></td>
+            </tr>
+            <tr>
+              <td><strong>Anchura: </strong></td>
+              <td><span class="info-item">{{loadBeach.Anchura}}</span></td>
+              <td><strong>Nudismo: </strong></td>
+              <td><span class="info-item">{{loadBeach.Nudismo}}</span></td>
+            </tr>
+            <tr>
+              <td><strong>Grado de ocupación: </strong></td>
+              <td><span class="info-item">{{loadBeach.Grado_ocupacion}}</span></td>
+            </tr>
+            <tr>
+              <td><strong>Grado de urbanización: </strong></td>
+              <td><span class="info-item">{{loadBeach.Grado_urbanizacion}}</span></td>
+            </tr>
+            <tr>
+              <td><strong>Paseo marítimo: </strong></td>
+              <td><span class="info-item">{{loadBeach.Paseo_maritimo}}</span></td>
+            </tr>
+            <tr>
+              <td><strong>Fachada litoral: </strong></td>
+              <td><span class="info-item">{{loadBeach.Fachada_Litoral}}</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-action">
+        <table class="table-1 centered responsive-table highlight">
+          <thead>
+            <tr>
+              <th colspan="14" class="item-title">3. Servicios</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="img/servicios/aseos.png" title="Aseos" alt="Aseos" />
+              <td><strong>Aseos: </strong></td>
+              <td><span class="info-item">{{loadBeach.Aseos}}</span></td>
+              <td><img src="img/servicios/ofi-turismo.png" title="Oficina de turismo" alt="Oficina de turismo" />
+              <td><strong>Oficina turismo: </strong></td>
+              <td><span class="info-item">{{loadBeach.Oficina_turismo}}</span></td>
+              <td><img src="img/servicios/alq-hamacas.png" title="Alquiler de hamacas" alt="Alquiler de hamacas" />
+              <td><strong>Alquiler de hamacas: </strong></td>
+              <td><span class="info-item">{{loadBeach.Alquiler_hamacas}}</span></td>
+              <td><img src="img/servicios/submarinismo.png" title="Zona submarinismo" alt="Zona submarinismo" />
+              <td><strong>Zona submarinismo: </strong></td>
+              <td><span class="info-item">{{loadBeach.Submarinismo}}</span></td>
+            </tr>
+            <tr>
+              <td><img src="img/servicios/lavapies.png" title="Lavapiés" alt="Lavapiés" />
+              <td><strong>Lavapiés: </strong></td>
+              <td><span class="info-item">{{loadBeach.Lavapies}}</span></td>
+              <td><img src="img/servicios/telefono.png" title="Teléfono" alt="Teléfono" />
+              <td><strong>Teléfono: </strong></td>
+              <td><span class="info-item">{{loadBeach.Telefonos}}</span></td>
+              <td><img src="img/servicios/alq-sombrillas.png" title="Alquiler de sombrillas" alt="Alquiler de sombrillas" />
+              <td><strong>Alquiler de sombrillas: </strong></td>
+              <td><span class="info-item">{{loadBeach.Alquiler_sombrillas}}</span></td>
+              <td><img src="img/servicios/practica-surf.png" title="Zona práctica de surf" alt="Zona práctica de surf" />
+              <td><strong>Zona práctica de surf: </strong></td>
+              <td><span class="info-item">{{loadBeach.Zona_Surf}}</span></td>
+            </tr>
+            <tr>
+              <td><img src="img/servicios/duchas.png" title="Duchas" alt="Duchas" />
+              <td><strong>Duchas: </strong></td>
+              <td><span class="info-item">{{loadBeach.Duchas}}</span></td>
+              <td><img src="img/servicios/est-comida.png" title="Establecimiento de comida" alt="Establecimiento de comida" />
+              <td><strong>Establecimiento comida: </strong></td>
+              <td><span class="info-item">{{loadBeach.Establecimiento_comida}}</span></td>
+              <td><img src="img/servicios/alq-nautico.png" title="Alquiler náuticos" alt="Alquiler náuticos" />
+              <td><strong>Alquiler náuticos: </strong></td>
+              <td><span class="info-item">{{loadBeach.Alquiler_nauticos}}</span></td>
+              <td><img src="img/servicios/zona-infantil.png" title="Zona infantil" alt="Zona infantil" />
+              <td><strong>Zona infantil: </strong></td>
+              <td><span class="info-item">{{loadBeach.Zona_infantil}}</span></td>
+            </tr>
+            <tr>
+              <td><img src="img/servicios/papeleras.png" title="Papeleras" alt="Papeleras" />
+              <td><strong>Papeleras: </strong></td>
+              <td><span class="info-item">{{loadBeach.Papelera}}</span></td>
+              <td><img src="img/servicios/est-bebida.png" title="Establecimiento de bebida" alt="Establecimiento de bebida" />
+              <td><strong>Establecimiento bebida: </strong></td>
+              <td><span class="info-item">{{loadBeach.Establecimiento_bebida}}</span></td>
+              <td><img src="img/servicios/club-nautico.png" title="Club náutico" alt="Club náutico" />
+              <td><strong>Club náutico: </strong></td>
+              <td><span class="info-item">{{loadBeach.Club_nautico}}</span></td>
+              <td><img src="img/servicios/zona-deportiva.png" title="Zona deportiva" alt="Zona deportiva" />
+              <td><strong>Zona deportiva: </strong></td>
+              <td><span class="info-item">{{loadBeach.Zona_deportiva}}</span></td>
+            </tr>
+            <tr>
+              <td><img src="img/servicios/serv-limpieza.png" title="Servicios de limpieza" alt="Servicios de limpieza" />
+              <td><strong>Servicio limpieza: </strong></td>
+              <td><span class="info-item">{{loadBeach.Servicio_limpieza}}</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-action">
+        <table class="table-1 centered responsive-table highlight">
+          <thead>
+            <tr>
+              <th colspan="2" class="item-title">4. Aspectos físicos y ambientales</th>
+              <th colspan="2" class="item-title">5. Hospital más cercano</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Vegetación: </strong></td>
+              <td><span class="info-item">{{loadBeach.Vegetacion}}</span></td>
+              <td><strong>Nombre hospital: </strong></td>
+              <td><span class="info-item">{{loadBeach.Hospital}}</span></td>
+            </tr>
+            <tr>
+              <td><strong>Espacio protegido: </strong></td>
+              <td><span class="info-item">{{loadBeach.Espacio_protegido}}</span></td>
+              <td><strong>Dirección: </strong></td>
+              <td><span class="info-item">{{loadBeach.Direccion_Hospital}}</span></td>
+            </tr>
+            <tr>
+              <td><strong>Actuaciones: </strong></td>
+              <td><span class="info-item">{{loadBeach.Actuaciones}}</span></td>
+              <td><strong>Teléfono: </strong></td>
+              <td><span class="info-item">{{loadBeach.Telefono_Hospital}}</span></td>
+            </tr>
+            <tr>
+              <td><strong>Bandera azul: </strong></td>
+              <td><span class="info-item">{{loadBeach.Bandera_azul}}</span></td>
+              <td><strong>Distancia aproximada a playa: </strong></td>
+              <td><span class="info-item">{{loadBeach.Distancia_Hospital}}</span></td>
+            </tr>
+            <tr>
+              <td><strong>Vegetación del lugar: </strong></td>
+              <td><span class="info-item">{{loadBeach.Vegetacion_lugar}}</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-action">
+        <table class="table-1 centered responsive-table highlight">
+          <thead>
+            <tr>
+              <th colspan="2" class="item-title">6. Accesos</th>
+              <th colspan="2" class="item-title">7. Seguridad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Forma de acceso: </strong></td>
+              <td><span class="info-item">{{loadBeach.Forma_de_acceso}}</span></td>
+              <td><strong>Señalización de peligro: </strong></td>
+              <td><span class="info-item">{{loadBeach.Senalizacion_peligro}}</span></td>
+            </tr>
+            <tr>
+              <td><strong>Señalización de los accesos: </strong></td>
+              <td><span class="info-item">{{loadBeach.Senalizacion_accesos}}</span></td>
+              <td><strong>Auxilio y salvamento: </strong></td>
+              <td><span class="info-item">{{loadBeach.Auxilio_y_salvamento}}</span></td>
+            </tr>
+            <tr>
+              <td><strong>Acceso discapacitados: </strong></td>
+              <td><span class="info-item">{{loadBeach.Acceso_discapacitados}}</span></td>
+            </tr>
+            <tr>
+              <td><strong>Coordenadas: </strong></td>
+              <td><span class="info-item">{{loadBeach.Coordenada_geografica_Latitud}} / {{loadBeach.Coordenada_geografica_Longitud}}</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-action">
+        <table class="table-1 centered responsive-table highlight">
+          <thead>
+            <tr>
+              <th colspan="2" class="item-title">8. Transporte</th>
+              <th colspan="2" class="item-title">9. Puerto Deportivo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Carretera más próxima: </strong></td>
+              <td><span class="info-item">{{loadBeach.Carretera_mas_proxima}}</span></td>
+              <td><strong>Nombre puerto: </strong></td>
+              <td><span class="info-item">{{loadBeach.Puerto_deportivo}}</span></td>
+            </tr>
+            <tr>
+              <td><strong>Autobús: </strong></td>
+              <td><span class="info-item">{{loadBeach.Autobus}}</span></td>
+              <td><strong>Distancia aproximada a playa: </strong></td>
+              <td><span class="info-item">{{loadBeach.Distancia_Puerto_Deportivo}}</span></td>
+            </tr>
+            <tr>
+              <td><strong>Aparcamiento: </strong></td>
+              <td><span class="info-item">{{loadBeach.Aparcamiento}}</span></td>
+              <td><strong>Web: </strong></td>
+              <td><span class="info-item">{{loadBeach.Web_puerto_deportivo}}</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-action">
+        <table class="table-1 responsive-table highlight">
+          <thead>
+            <tr>
+              <th colspan="2" class="item-title">10. Observaciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="info-item">{{loadBeach.Observaciones}}</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div> 
+  </article>
+</div>

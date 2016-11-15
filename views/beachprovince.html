@@ -1,0 +1,96 @@
+<section class="container" ng-controller="provinciaController">
+	<h1 class="info-map center">¡Estas son las playas de su provincia!</h1>
+	<div class="row">
+		<input class="col s4 left" ng-model="namebeachFilter" type="text" name="playa" id="provinciaInput3" placeholder="Si conoce el nombre de su playa, introdúcelo ..."/>
+		<a href="#/" class="button-beach3 waves-effect waves-light btn col s4 right">Volver al mapa</a>
+	</div>
+	<div class="row">
+		<article id="sec-form" class="col s4">
+		  <form>
+		  	<h3 class="title-filter">Señale sus preferencias</h3>
+		  	<div class="input-field col s12">
+		  	  <p class="labelfilter">Bandera Azul</p>
+		  	  <select ng-model="banderaFilter" class="browser-default">
+		  	    <option value="" selected>Bandera azul</option>
+		  	    <option ng-repeat="provincia in provincias | unique:'Bandera_azul'" value="{{provincia.Bandera_azul}}">{{provincia.Bandera_azul}}</option>
+		  	  </select>
+		  	</div>
+		  	<div class="input-field col s12">
+		  	  <p class="labelfilter">Formas de acceso</p>
+		  	  <select ng-model="accesoFilter" class="browser-default">
+		  	    <option value="" selected>Formas de acceso</option>
+		  	    <option ng-repeat="provincia in provincias | orderBy: 'Forma_de_acceso' | unique:'Forma_de_acceso'" ng-if="provincia.Forma_de_acceso != 'Desconocido'" value="{{provincia.Forma_de_acceso}}">{{provincia.Forma_de_acceso}}</option>
+		  	  </select>
+		  	</div>
+		  	<div class="input-field col s12">
+		  	  <p class="labelfilter">Aparcamientos</p>
+		  	  <select ng-model="aparcamientoFilter" class="browser-default">
+		  	    <option value="" selected>Aparcamientos</option>
+		  	    <option ng-repeat="provincia in provincias | unique:'Aparcamiento'" ng-if="provincia.Aparcamiento != 'Desconocido'" value="{{provincia.Aparcamiento}}">{{provincia.Aparcamiento}}</option>
+		  	  </select>
+		  	</div>
+		  	<div class="input-field col s12">
+		  	  <p class="labelfilter">Establecimiento de comida</p>
+		  	  <select ng-model="barFilter" class="browser-default">
+		  	    <option value="" selected>Establecimiento de comida</option>
+		  	    <option ng-repeat="provincia in provincias | unique:'Establecimiento_comida'" ng-if="provincia.Establecimiento_comida != 'Desconocido'" value="{{provincia.Establecimiento_comida}}">{{provincia.Establecimiento_comida}}</option>
+		  	  </select>
+		  	</div>
+		  	<div class="input-field col s12">
+		  	  <p class="labelfilter">Alquiler de sombrillas</p>
+		  	  <select ng-model="sombrillaFilter" class="browser-default">
+		  	    <option value="" selected>Alquiler de sombrillas</option>
+		  	    <option ng-repeat="provincia in provincias | unique:'Alquiler_sombrillas'" ng-if="provincia.Alquiler_sombrillas != 'Desconocido'" value="{{provincia.Alquiler_sombrillas}}">{{provincia.Alquiler_sombrillas}}</option>
+		  	  </select>
+		  	</div>
+		    <div class="input-field col s12">
+		      <p class="labelfilter">Tipo de arena</p>
+		      <select ng-model="arenaFilter" id="tipo-arena" class="browser-default">
+		        <option value="" selected>Tipo de arena</option>
+		        <option ng-repeat="provincia in provincias | orderBy: 'Tipo_de_arena' | unique:'Tipo_de_arena'" ng-if="provincia.Tipo_de_arena != 'Desconocido'" value="{{provincia.Tipo_de_arena}}">{{provincia.Tipo_de_arena}}</option>
+		      </select>
+		    </div>
+		    <div class="input-field col s12">
+		      <p class="labelfilter">Playa Nudista</p>
+		      <select ng-model="nudismoFilter" class="browser-default">
+		        <option value="" selected>Playa Nudista</option>
+		        <option ng-repeat="provincia in provincias | orderBy: 'Nudismo' | unique:'Nudismo'" ng-if="provincia.Nudismo != 'Desconocido'" value="{{provincia.Nudismo}}">{{provincia.Nudismo}}</option>
+		      </select>
+		    </div>
+		    <div class="input-field col s12">
+		      <p class="labelfilter">Espacio protegido</p>
+		      <select ng-model="protegidoFilter" class="browser-default">
+		        <option value="" selected>Espacio protegido</option>
+		        <option ng-repeat="provincia in provincias | unique:'Espacio_protegido'" ng-if="provincia.Espacio_protegido != 'Desconocido'" value="{{provincia.Espacio_protegido}}">{{provincia.Espacio_protegido}}</option>
+		      </select>
+		    </div>
+		    <div class="input-field col s12">
+		      <p class="labelfilter">Práctica de submarinismo</p>
+		      <select ng-model="submarinismoFilter" class="browser-default">
+		        <option value="" selected>Práctica de submarinismo</option>
+		        <option ng-repeat="provincia in provincias | unique:'Submarinismo'" ng-if="provincia.Submarinismo != 'Desconocido'" value="{{provincia.Submarinismo}}">{{provincia.Submarinismo}}</option>
+		      </select>
+		    </div>
+		    <div class="input-field col s12">
+		      <p class="labelfilter">Zona de surf</p>
+		      <select ng-model="surfFilter" class="browser-default">
+		        <option value="" selected>Zona de surf</option>
+		        <option ng-repeat="provincia in provincias | unique:'Zona_Surf'" ng-if="provincia.Zona_Surf != 'Desconocido'" value="{{provincia.Zona_Surf}}">{{provincia.Zona_Surf}}</option>
+		      </select>
+		    </div>
+		  </form>
+		</article>
+		<article id="col-info-beach" class="offset-s8">
+			<ul class="collection">
+			  <li ng-repeat="loadBeach in loadBeaches | orderBy:'Nombre' | filter: {Provincia:nameFilter, Bandera_azul: banderaFilter, Forma_de_acceso: accesoFilter, Aparcamiento: aparcamientoFilter, Establecimiento_comida: barFilter, Alquiler_sombrillas: sombrillaFilter, Tipo_de_arena: arenaFilter, Nudismo: nudismoFilter, Espacio_protegido: protegidoFilter, Submarinismo: submarinismoFilter, Zona_Surf: surfFilter, Nombre:namebeachFilter}" class="collection-beach collection-item avatar">
+			  	<a href="{{loadBeach.Imagen}}" data-lightbox="playas-collection" data-title="{{loadBeach.Nombre}}">
+					<img ng-src="{{loadBeach.Imagen}}" alt="{{loadBeach.Imagen}}" class="circle" width="32" />
+			  	</a>
+			    <span class="title">{{loadBeach.Nombre}}</span>
+			    <p>{{loadBeach.Provincia}}</p>
+			    <a class="blue-text" href="#provincia/{{loadBeach.Provincia}}/playa/{{loadBeach.Nombre}}">DETALLES</a>
+			  </li>
+			</ul>
+		</article>
+	</div>
+</section>

@@ -1,0 +1,81 @@
+<nav class="nav-color" role="navigation">
+  <div class="col s12 nav-wrapper container">
+    <a id="logo-container" href="#/" class="brand-logo">
+      <img src="img/logo.png" title="PlayeoSpain" alt="PlayeoSpain" />
+    </a>
+		<!--dropdown para menú estándar-->
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a ng-click="myFilter={comunidadAutonoma: ''}" href="#comunidadAutonoma">TODAS LAS PLAYAS</a></li>
+			<li><a ng-click="myFilter={comunidadAutonoma: 'Andalucia'}" href="#comunidadAutonoma/Andalucia">ANDALUCÍA</a></li>
+			<li><a ng-click="myFilter={comunidadAutonoma: 'Asturias'}" href="#comunidadAutonoma/Asturias">ASTURIAS</a></li>
+			<li><a ng-click="myFilter={comunidadAutonoma: 'Canarias'}" href="#comunidadAutonoma/Canarias">CANARIAS</a></li>
+			<li><a ng-click="myFilter={comunidadAutonoma: 'Cantabria'}" href="#comunidadAutonoma/Cantabria">CANTABRIA</a></li>
+      <li><a ng-click="myFilter={comunidadAutonoma: 'Cataluna'}" href="#comunidadAutonoma/Cataluna">CATALUÑA</a></li>
+      <li><a ng-click="myFilter={comunidadAutonoma: 'Ceuta'}" href="#comunidadAutonoma/Ceuta">CEUTA</a></li>
+      <li><a ng-click="myFilter={comunidadAutonoma: 'ComunidadValenciana'}" href="#comunidadAutonoma/ComunidadValenciana">COMUNIDAD VALENCIANA</a></li>
+      <li><a ng-click="myFilter={comunidadAutonoma: 'Galicia'}" href="#comunidadAutonoma/Galicia">GALICIA</a></li>
+      <li><a ng-click="myFilter={comunidadAutonoma: 'IslasBaleares'}" href="#comunidadAutonoma/IslasBaleares">ISLAS BALEARES</a></li>
+      <li><a ng-click="myFilter={comunidadAutonoma: 'Melilla'}" href="#comunidadAutonoma/Melilla">MELILLA</a></li>
+      <li><a ng-click="myFilter={comunidadAutonoma: 'Murcia'}" href="#comunidadAutonoma/Murcia">MURCIA</a></li>
+      <li><a ng-click="myFilter={comunidadAutonoma: 'PaisVasco'}" href="#comunidadAutonoma/PaisVasco">PAÍS VASCO</a></li>
+		</ul>
+		
+		<!--dropdown para menú responsive-->
+    <ul id="dropdown2" class="dropdown-content">
+      <li><a ng-click="myFilter={comunidadAutonoma: ''}" href="#comunidadAutonoma">TODAS LAS PLAYAS</a></li>
+			<li><a ng-click="myFilter={comunidadAutonoma: 'Andalucia'}" href="#comunidadAutonoma/Andalucia">ANDALUCÍA</a></li>
+      <li><a ng-click="myFilter={comunidadAutonoma: 'Asturias'}" href="#comunidadAutonoma/Asturias">ASTURIAS</a></li>
+      <li><a ng-click="myFilter={comunidadAutonoma: 'Canarias'}" href="#comunidadAutonoma/Canarias">CANARIAS</a></li>
+      <li><a ng-click="myFilter={comunidadAutonoma: 'Cantabria'}" href="#comunidadAutonoma/Cantabria">CANTABRIA</a></li>
+      <li><a ng-click="myFilter={comunidadAutonoma: 'Cataluna'}" href="#comunidadAutonoma/Cataluna">CATALUÑA</a></li>
+      <li><a ng-click="myFilter={comunidadAutonoma: 'Ceuta'}" href="#comunidadAutonoma/Ceuta">CEUTA</a></li>
+      <li><a ng-click="myFilter={comunidadAutonoma: 'ComunidadValenciana'}" href="#comunidadAutonoma/ComunidadValenciana">COMUNIDAD VALENCIANA</a></li>
+      <li><a ng-click="myFilter={comunidadAutonoma: 'Galicia'}" href="#comunidadAutonoma/Galicia">GALICIA</a></li>
+      <li><a ng-click="myFilter={comunidadAutonoma: 'IslasBaleares'}" href="#comunidadAutonoma/IslasBaleares">ISLAS BALEARES</a></li>
+      <li><a ng-click="myFilter={comunidadAutonoma: 'Melilla'}" href="#comunidadAutonoma/Melilla">Melilla</a></li>
+      <li><a ng-click="myFilter={comunidadAutonoma: 'Murcia'}" href="#comunidadAutonoma/Murcia">MURCIA</a></li>
+      <li><a ng-click="myFilter={comunidadAutonoma: 'PaisVasco'}" href="#comunidadAutonoma/PaisVasco">PAÍS VASCO</a></li>
+		</ul>
+
+    <!--Menú estándar-->
+    <ul class="right hide-on-med-and-down navig">
+      <li>
+      	<a href="#/">INICIO</a>
+      </li>
+      <li>
+      	<a class="dropdown-button" href="#" data-activates="dropdown1">PLAYAS DE ESPAÑA
+      		<i class="material-icons right">arrow_drop_down</i>
+      	</a>
+      </li>
+      <li>
+      	<a href="#contact">CONTACTO</a>
+      </li>           
+    </ul>
+
+		<!--Menú responsive-->
+    <ul class="side-nav" id="mobile-demo">
+      <li>
+        <a href="#/">INICIO</a>
+      </li>
+      <li>
+        <a class='dropdown-button' href="#" data-activates='dropdown2'>PLAYAS DE ESPAÑA
+          <i class="material-icons right">arrow_drop_down</i>
+        </a>
+      </li>
+      <li>
+        <a href="#contact">CONTACTO</a>
+      </li>
+    </ul>
+		<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+  </div>
+</nav>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    //Función para el menú desplegable
+    $('.dropdown-button').dropdown();
+    $('.button-collapse').sideNav();
+  });
+</script>
+

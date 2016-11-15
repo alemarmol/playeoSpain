@@ -1,0 +1,54 @@
+<section class="container" ng-controller="beachComunidadController">
+  <div class="row">
+    <h4 class="title-sec title-gallery center">Ficha de las playas</h4>
+  </div>
+  <div class="row">
+    <dir-pagination-controls class="col s6"
+      max-size="10"
+      direction-links="true"
+      boundary-links="true" >
+    </dir-pagination-controls>
+    <input class="col s4 right" ng-model="nameProv" type="text" name="provincia" id="provinciaInput2" placeholder="Buscar provincia ..."/>
+  </div>
+
+  <div class="row">
+    <article dir-paginate="comunidadAutonoma in comunidadAutonomas  | orderBy:'Nombre' | filter: myFilter | filter: {Provincia: nameProv} | itemsPerPage: 10" class="card-edit">
+      <div class="card">
+        <div class="card-image">
+          <a href="{{comunidadAutonoma.Imagen}}" data-lightbox="playas-card" data-title="{{comunidadAutonoma.Nombre}}">
+            <img ng-src="{{comunidadAutonoma.Imagen}}" alt="{{comunidadAutonoma.Imagen}}" class="img-edit" />
+          </a>
+          <span class="card-title">{{comunidadAutonoma.Nombre}}</span>
+        </div>
+        <div class="desc card-content">
+          <p>{{comunidadAutonoma.Descripcion}}</p>
+        </div>
+        <div class="card-action">
+          <strong>Comunidad Autónoma: <strong><span class="info-item">{{comunidadAutonoma.comunidadAutonoma}}</span>
+        </div>
+        <div class="card-action">
+          <strong>Provincia: <strong><span class="info-item">{{comunidadAutonoma.Provincia}}</span>
+        </div>
+        <div class="card-action">
+          <strong>Composición: <strong><span class="info-item">{{comunidadAutonoma.Composicion}}</span>
+        </div>
+        <div class="card-action">
+          <strong>Bandera Azul: <strong><span class="info-item">{{comunidadAutonoma.Bandera_azul}}</span>
+        </div>
+        <div class="card-action">
+          <strong>Espacio Protegido: <strong><span class="info-item">{{comunidadAutonoma.Espacio_protegido}}</span>
+        </div>
+        <div class="card-action">
+          <a class="blue-text" href="#provincia/{{comunidadAutonoma.Provincia}}/playa/{{comunidadAutonoma.Nombre}}">DETALLES</a>
+        </div>
+      </div>    
+    </article>
+    <div class="row">
+      <dir-pagination-controls
+        max-size="10"
+        direction-links="true"
+        boundary-links="true" >
+      </dir-pagination-controls>
+    </div>
+  </div>
+</section>

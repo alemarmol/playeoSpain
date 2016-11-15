@@ -1,0 +1,311 @@
+/*FOOTER FIJO ABAJO*/
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.title-sec {
+  margin-top: 65px;
+  font: normal bold 40px "clementepdagbook", Arial, Tahoma;
+  line-height: 65px;
+  color: #0f1a45;
+}
+
+/*NAV*/
+.nav-color {
+  background-color: #B9F7E3;
+}
+
+.navig {
+  margin-right: 8%;
+}
+
+.material-icons {
+  color: #0f1a45;
+}
+
+.right > li > a {
+  color: #0f1a45;
+}
+
+#dropdown1 > li > a {
+  color: #0f1a45;
+}
+
+#dropdown2 > li > a {
+  color: #0f1a45;
+}
+
+#mobile-demo > li > a {
+  color: #0f1a45;
+}
+
+#logo-container {
+  margin-left: 5%;
+}
+
+/*SLIDER*/
+.slider .indicators {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 50px !important;
+  margin: 0;
+  z-index: 9;
+}
+
+.text-slider {
+  margin-top: -20px;
+  font: normal bold 30px "clementepdagbook", Arial, Tahoma;
+  line-height: 65px;
+  color: #fff;
+}
+
+.text-slider2 {
+  margin-top: -40px;
+  font: normal bold 22px "clementepdaahairline", Arial, Tahoma;
+  line-height: 65px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.button-beach {
+  padding: 10px 20px 10px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font: normal bold 18px "clementepdagbook", Arial, Tahoma;
+  color: #0f1a45;
+  background: #B9F7E3 url("../img/beach.png") left center no-repeat; 
+  text-align: right;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px #333;
+  letter-spacing: 1px;
+}
+
+.button-beach2 {
+  background: url("../img/beach.png") left center no-repeat; 
+  margin-left: 17%;
+}
+
+.button-div {
+  margin-top: 260px;
+}
+
+.button-beach:hover {
+  opacity: 0.8;
+}
+
+/*CARD*/
+.card-edit {
+  width: 48%;
+  display: inline-block;
+  margin: 2% 1% 5% 1%;
+}
+
+.desc {
+  height: 120px;
+}
+
+.info-item {
+  font-weight: normal;
+}
+
+/*SECTION 1 - INFO APP*/
+.sec-app-info {
+  margin-bottom: 15px;
+}
+
+.info-app1 {
+  margin-top: -5px;
+  font: normal normal 45px "clementepdagbook", Arial, Tahoma;
+  line-height: 65px;
+  color: #0f1a45;
+}
+
+.info-app2 {
+  font: normal normal 80px "clementepdagbook", Arial, Tahoma;
+  line-height: 82px;
+  margin: -10px 0 45px 0; 
+  color: #0f1a45;
+}
+
+.info-app3 {
+  width: 79%;
+  margin: 15px auto 0 auto;
+  font: normal normal 20px "clementepdaahairline", Arial, Tahoma;
+  letter-spacing: 1px;
+  text-align: justify;
+  font-weight: bold;
+}
+
+/*MAP*/
+.sec-map {
+  background-color: rgba(62, 214, 208,0.4);
+  padding: 20px 0;
+}
+
+.info-map {
+  font: normal normal 50px "clementepdagbook", Arial, Tahoma;
+  color: #0f1a45;
+}
+
+/*AMMAP - MAPA DE ESPAÑA*/
+#map {
+  width: 100%;
+  height: 700px;
+}
+
+svg {
+  width: 100%;
+  height: 600px;
+  padding-bottom: 20px;
+}
+
+/*FORMULARIO*/
+.browser-default {
+  border: 1px solid #0f1a45;
+  border-radius: 5px;
+}
+
+#provinciaInput {
+  width: 20%;
+  height: 34px;
+  margin-left: -9%;
+  color: #0f1a45;
+  font: normal bold 18px "clementepdagbook", Arial, Tahoma;
+}
+
+#provinciaInput2 {
+  color: #0f1a45;
+  font: normal bold 18px "clementepdagbook", Arial, Tahoma;
+}
+
+#provinciaInput3 {
+  width: 35%;
+  margin: 12px 0 13px 25px;
+  color: #0f1a45;
+  font: normal bold 18px "clementepdagbook", Arial, Tahoma;
+  opacity: 1;
+}
+
+.button-galery {
+  margin-right: 9%;
+}
+
+
+/*FOOTER*/
+footer.page-footer {
+  margin-top: 0px !important;
+}
+
+/*FORMULARIO*/
+.infor {
+  font: normal bold 19px "clementepdaahairline", Arial, Tahoma;
+  text-align: justify;
+  color: #0f1a45;
+}
+
+/*SEC-FORM*/
+.button-beach3 {
+  width: 15% !important;
+  padding-left: 1.5% !important;
+  margin: 22px 0 0 2% !important;
+  background: url("../img/beach.png") left center no-repeat; 
+}
+
+#sec-form {
+  margin: 0 2%;
+  background-color: #F2DC85;
+  padding: 0 1.5% 2.5% 1.5%;
+  border-radius: 3px;
+}
+
+.title-filter {
+  text-align: center;
+  font: normal bold 25px "clementepdagbook", Arial, Tahoma;
+  color: #0f1a45;
+}
+
+#search-beach {
+  margin: 2% 0 0.2% 7%;
+}
+
+/*COLLECTION-BEACH*/
+.collection-beach {
+   width: 33%;
+   display: inline-block;
+   border-radius: 5px;
+   border-bottom: 0 !important;
+}
+
+.labelfilter {
+  font: normal bold 20px "clementepdaahairline", Arial, Tahoma !important;
+  color: #0f1a45;
+}
+
+/*PAGINATION*/
+.pagination li.active {
+    background-color: #B9F7E3!important;
+}
+
+/*BEACH-SINGLE*/
+.card-edit-single {
+  width: 92.5%;
+  margin: 0 auto;
+}
+
+.item-title {
+  text-align: center !important;
+  font: normal bold 18px "clementepdagbook", Arial, Tahoma;
+  color: #0f1a45;
+  letter-spacing: 1px;
+  border-bottom: 1px dotted #B9F7E3;
+}
+
+td, th {
+  padding: 4px 5px !important;
+}
+
+.table-1 {
+  width: 100%;
+}
+
+/*FOOTER*/
+.info-footer {
+  font-size: 17px;
+}
+
+.social-icon {
+  margin-right: 3%;
+  opacity: 0.5;
+}
+
+.social-icon:hover {
+  margin-right: 3%;
+  opacity: 1;
+}
+
+.info-footer-final:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.button-beach4 {
+  width: 30% !important;
+  padding-left: 1.5% !important;
+  margin: 22px 0 0 4.5% !important;
+  background: url("../img/beach.png") left center no-repeat; 
+}
+
+.button-beach5 {
+  width: 15% !important;
+  padding-left: 1.5% !important;
+  margin: 22px 4.7% 0 0 !important;
+  background: url("../img/beach.png") left center no-repeat; 
+}

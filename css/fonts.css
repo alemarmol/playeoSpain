@@ -1,0 +1,33 @@
+@font-face {font-family: "Livory W01 Regular Italic";
+  src: url("../fonts/livory/livoryItalic.eot"); /* IE9*/
+  src: url("../fonts/livory/livoryItalic.eot?#iefix") format("embedded-opentype"), 
+  url("../fonts/livory/livoryItalic.woff2") format("woff2"), 
+  url("../fonts/livory/livoryItalic.woff") format("woff"), 
+  url("../fonts/livory/livoryItalic.ttf") format("truetype"),
+  url("../fonts/livory/livoryItalic.svg#Livory W01 Regular Italic") format("svg"); 
+}
+
+@font-face {font-family: "Livory W01 Regular";
+  src: url("../fonts/livory/livoryRegular.eot"); /* IE9*/
+  src: url("../fonts/livory/livoryRegular.eot?#iefix") format("embedded-opentype"), 
+  url("../fonts/livory/livoryRegular.woff2") format("woff2"), 
+  url("../fonts/livory/livoryRegular.woff") format("woff"), 
+  url("../fonts/livory/livoryRegular.ttf") format("truetype"),
+  url("../fonts/livory/livoryRegular.svg#Livory W01 Regular Italic") format("svg"); 
+}
+
+@font-face {font-family: 'clementepdaahairline';
+  src: url('../fonts/clemente/clementepdaa-hairline-webfont.woff2') format('woff2'),
+  url('../fonts/clemente/clementepdaa-hairline-webfont.woff') format('woff'),
+  url("../fonts/clemente/ClementePDaa-Hairline.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {font-family: 'clementepdagbook';
+  src: url('../fonts/clemente/clementepdag-book-webfont.woff2') format('woff2'),
+  url('../fonts/clemente/clementepdag-book-webfont.woff') format('woff'),
+  url("../fonts/clemente/ClementePDag-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
